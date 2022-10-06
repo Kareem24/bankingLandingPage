@@ -43,6 +43,7 @@ p,small{
 button{
     cursor: pointer;
 }
+
 header{
     width: 100%;
     height: 140px;
@@ -73,7 +74,13 @@ header .nav{
 .navlinks li a{
     font-weight: 500;
     font-size: 1.125rem;
-    color:var(--text-color)
+    color:var(--text-color);
+    display: inline-flex;
+    transition: .2s linear;
+}
+.navlinks li a:hover{
+    transform: translateY(-6px);
+    color: var(--heading-color);
 }
 .nav .loginBtn{
     display: inline-block;
@@ -220,6 +227,7 @@ main .section{
     margin: 40px auto;
     display: flex ;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
 }
 /* DOWNLOAD BUTTONS */
@@ -235,6 +243,10 @@ main .section{
     outline: none;
     box-shadow: none;
     width: 297px;
+}
+.download__btns button:hover{
+    background: radial-gradient(40.75% 97.37% at 90.75% 40.15%,#EA8ED0 34.46%, #F0BDD0 69.5%, rgba(255, 129, 38, 0) 100%),
+        #C2A6F1;
 }
 button img{
     width: 60px;
@@ -267,14 +279,15 @@ button .text p{
     flex: 1;
 }
 .img__col img{
-    max-width: 550px;
+    width: 550px;
 }
 .text__col{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    /* justify-content: flex-start; */
     flex-direction: column;
     text-align: left;
+    margin-left: 100px;
 }
 .text__col h2{
     max-width: 344px;
@@ -302,8 +315,8 @@ button .text p{
     background: transparent;
     border: 1.6px solid #6C6C6C;
     color: var(--heading-color);
-    align-self: flex-start;
-    margin-left: 166px;
+    /* align-self: flex-start; */
+    /* margin-left: 166px; */
     margin-top: 65px;
 }
 
@@ -372,7 +385,6 @@ form input[type=submit]{
    
   }
   .text__col .text{
-    background: green;
    flex-basis: 50%;
   }
 }
@@ -389,7 +401,7 @@ form input[type=submit]{
         margin-right: 8px;
     }
     .nav .navlink{
-     position:absolute;
+     position:fixed;
     width: 50%;
     height: 100vh;
     z-index: 20;
@@ -428,13 +440,126 @@ form input[type=submit]{
     height: 100vh;
     background:linear-gradient(rgba(0, 0, 0, 0.4),
         rgba(0, 0, 0,0.5)) ;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
  }
+ 
  .navlinks li a{
     color: var(--heading-color);
     font-size: 1.5rem;
  }
+ .steps .get-started{
+    background: none;
+ }
+ .email__section form {
+     margin: 20px 0;
+     display: flex;
+     /* align-items: flex-end;
+     justify-content: flex-start; */
+     flex-wrap: wrap;
+     gap: 10px;
+ }
+}
+@media screen and (max-width:550px){
+.steps .download__btns{
+    gap: 15px;
+}
+.download__btns button {
+    gap: 10px;
+    padding: .5em 1em;
+    width: 240px;
+    border-radius:15px ;
+    /* white-space: nowrap; */
+}
+button img {
+    width: 45px;
+}
+button .text p {
+    font-size: 1.05rem;
+}
+.img__col img {
+    width: 450px;
+}
+button .text p {
+    white-space: nowrap;
+}
+
+
+form input[type=email] {
+    width: 250px;
+    height: 45px;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    padding-left: 20px;
+}
+
+form input[type=submit] {
+    padding: .8em 1.5em;
+    font-size: 1.015rem;
+    border-radius: 12px;
+}
+
+}
+@media screen and (max-width:450px){
+    .menu .logo{
+        width: 70px;
+    }
+.text-col h1 {
+        font-size: 2.75rem;
+        margin: 29px 0 30px;
+    }
+
+    .text-col p {
+        font-size: 1.025rem;
+        margin-bottom: 50px;
+    }
+    .steps h2 {
+        font-size: 2.3rem;
+    }
+
+    .steps p {
+        font-size: 1.025rem;
+    }
+    .step h3 {
+        font-size: 1.45rem;
+    }
+    .img__col img {
+        width: 350px;
+    }
+    .text__col{
+        margin-left: 40px;
+    }
+        .text__col h2 {
+            max-width: 344px;
+            font-size: 2.2rem;
+            margin: 0 0 40px;
+        }
+    
+        .text__col p {
+            max-width: 336px;
+            font-size: 1.025rem;
+            line-height: 2;
+    
+        }
+    
+}
+@media screen and (max-width:343px){
+  .nav .loginBtn{
+    display: flex;
+    align-items: center;
+  }
+  .loginBtn .btn {
+      border-radius: 6px;
+      padding: .2em .4em;
+      font-size: 1rem;
+      white-space: nowrap;
+  }
+   .img__col img {
+       width: 300px;
+   }
+   .nav .menu{
+    display: flex;
+   }
 }
