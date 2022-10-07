@@ -261,6 +261,7 @@ main .section{
     box-shadow: none;
     width: 297px;
     white-space: nowrap;
+    margin: 10px 0;
 }
 .download__btns button:hover{
     background: radial-gradient(40.75% 97.37% at 90.75% 40.15%,#EA8ED0 34.46%, #F0BDD0 69.5%, rgba(255, 129, 38, 0) 100%),
