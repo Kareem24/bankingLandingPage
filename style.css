@@ -53,6 +53,7 @@ p,small{
 button{
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
+    
 }
 
 header{
@@ -89,6 +90,7 @@ header .nav{
     display: inline-flex;
     transition: .2s linear;
     font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
 }
 .navlinks li a:hover{
     transform: translateY(-6px);
@@ -106,6 +108,7 @@ header .nav{
     padding: .8em 1em;
     font-weight: 500;
     font-size: 1.125rem;
+    text-transform: uppercase;
     transition: .3s ease-in;
 }
 .loginBtn .login,.loginBtn .signup:hover{
@@ -190,6 +193,7 @@ main .section{
 }
 .cards-col img{
     width: 100%;
+    animation: hue-shift 6s infinite alternate;
 }
 
 /* step section starts here */
@@ -324,7 +328,7 @@ button .text p{
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     margin-top: 50px ;
     gap: 20px;
     /* justify-content: center; */
@@ -591,4 +595,12 @@ form input[type=submit] {
    .nav .menu{
     display: flex;
    }
+}
+@keyframes hue-shift{
+    from{
+        filter: hue-rotate(0);
+    }
+    to{
+        filter: hue-rotate(360deg);
+    }
 }

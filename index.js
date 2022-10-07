@@ -7,7 +7,6 @@ hamburger.forEach((btn) => {
         main.classList.toggle('light-box');
     });
 });
-console.log(window)
 window.addEventListener('scroll', () => { 
     if (pageYOffset > 35) {
          navlink.classList.remove('show__navlinks');
