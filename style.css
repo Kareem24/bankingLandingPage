@@ -426,7 +426,7 @@ form input[type=submit]{
     }
     .nav .navlink{
      position:fixed;
-    width: 50%;
+    width: 75%;
     height: 100vh;
     z-index: 20;
     left: 0;
@@ -444,11 +444,11 @@ form input[type=submit]{
     transform: translateX(0);
 }
 .navlink .navlinks{
-    height: 80%;
+    height: 60%;
      display: flex;
      align-items: center;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
 
  }
@@ -476,7 +476,7 @@ form input[type=submit]{
  
  .navlinks li a{
     color: var(--heading-color);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
  }
  .steps .get-started{
     background: none;
