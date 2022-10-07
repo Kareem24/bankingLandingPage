@@ -4,7 +4,15 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
-    font-family: sans-serif
+}
+body{
+        font-family: 'DM Sans', sans-serif;
+        
+            font-family: 'Poppins', sans-serif;
+        
+            font-family: 'Roboto', sans-serif;
+        
+            font-family: 'Roboto Slab', serif;
 }
 
 :root{
@@ -39,8 +47,11 @@ h2,h3{
 p,small{
     font-weight: 400;
     color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    
 }
 button{
+    font-family: 'Roboto', sans-serif;
     cursor: pointer;
 }
 
@@ -77,6 +88,7 @@ header .nav{
     color:var(--text-color);
     display: inline-flex;
     transition: .2s linear;
+    font-family: 'Roboto', sans-serif;
 }
 .navlinks li a:hover{
     transform: translateY(-6px);
@@ -141,10 +153,12 @@ main .section{
 .free-trial h4{
     font-weight: 500;
     font-size: 1.125rem;
+    font-family: 'Poppins', sans-serif;
 }
 .text-col h1{
     font-size: 3.75rem;
     margin: 32px 0 36px;
+    font-family: 'Roboto Slab', serif;
 }
 .text-col p{
     font-size: 1.125rem;
@@ -188,6 +202,8 @@ main .section{
     font-size: 3rem;
     font-weight: 600;
     margin: 20px auto;
+    font-family: 'Poppins', sans-serif;
+
 }
 .steps p{
     max-width: 435px;
@@ -221,6 +237,7 @@ main .section{
     text-align: center;
     font-weight: 600;
     font-size: 1.75rem;
+    font-family: 'Poppins', sans-serif;
 }
 .steps .download__btns{
     width: 100%;
@@ -243,6 +260,7 @@ main .section{
     outline: none;
     box-shadow: none;
     width: 297px;
+    white-space: nowrap;
 }
 .download__btns button:hover{
     background: radial-gradient(40.75% 97.37% at 90.75% 40.15%,#EA8ED0 34.46%, #F0BDD0 69.5%, rgba(255, 129, 38, 0) 100%),
@@ -298,6 +316,7 @@ button .text p{
     max-width: 336px;
     font-size: 1.125rem;
     line-height: 2;
+    font-family: 'Poppins', sans-serif;
     
 }
 .text__col .sect{
@@ -331,6 +350,7 @@ button .text p{
     font-size: 2.5rem;
     font-weight: 600;
     margin: 10px auto;
+    font-family: 'Poppins', sans-serif;
 }
 .email__section p{
     font-size: 1.125rem;
@@ -399,6 +419,10 @@ form input[type=submit]{
     .nav .menu .toggle-btn{
         display: initial;
         margin-right: 8px;
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 1.5rem;
     }
     .nav .navlink{
      position:fixed;
@@ -432,6 +456,10 @@ form input[type=submit]{
     display: initial;
     align-self: flex-end;
     margin: 0 18px 30px;
+    background: none;
+        border: none;
+        outline: none;
+        font-size: 1.5rem;
  }
 .light-box::after{
     content: '';
