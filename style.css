@@ -13,6 +13,7 @@ body{
             font-family: 'Roboto', sans-serif;
         
             font-family: 'Roboto Slab', serif;
+            overflow-x: hidden;
 }
 
 :root{
@@ -82,6 +83,7 @@ header .nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 5px;
 }
 .navlinks li a{
     font-weight: 500;
@@ -91,6 +93,7 @@ header .nav{
     transition: .2s linear;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
+    padding: 0 5px;
 }
 .navlinks li a:hover{
     transform: translateY(-6px);
@@ -119,7 +122,7 @@ header .nav{
     border: 1px solid #DBDBDB;
 }
 .loginBtn .signup ,.loginBtn .login:hover{
-    background:  #0C1229;;
+    background:  #000000;;
     color: var(--white);}
 /* nav bar ends  */
 
@@ -134,13 +137,13 @@ main .section{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    background: #E5E5E5;
     /* background: red; */
 }
 /* text col start here */
 .section .text-col{
     flex: 1;
     flex-basis: 50%;
-    background: #E5E5E5;
     width: 100%;
     padding: 5em 0.2em;
 }
@@ -256,23 +259,26 @@ main .section{
     align-items: center;
     background: transparent;
     border: 1.5px solid  #DBDBDB;;
-    border-radius: 25px;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 1em 1.3em;
+    padding: .8em 1.3em;
     outline: none;
     box-shadow: none;
     width: 297px;
     white-space: nowrap;
     margin: 10px 0;
+    text-align: left;
+    height: 59px;
 }
 .download__btns button:hover{
     background: radial-gradient(40.75% 97.37% at 90.75% 40.15%,#EA8ED0 34.46%, #F0BDD0 69.5%, rgba(255, 129, 38, 0) 100%),
         #C2A6F1;
+        animation: hue-shift 1s linear infinite;
 }
 button img{
-    width: 60px;
+    width: 20px;
 }
 button span{
     font-weight: 300;
@@ -282,7 +288,7 @@ button span{
 }
 button .text p{
     color: var(--heading-color);
-    font-size: 1.25rem;
+    font-size: 1.28rem;
 }
 /*download region style starts here #region */ 
 .download{
@@ -296,7 +302,42 @@ button .text p{
     display: flex;
     align-items: center;
     justify-content: center;
+  
 }
+.download .animate__left{
+transform: translateX(-100%);
+transition: 1s linear ;
+}
+.download .animate__right{
+    transform: translateX(200%);
+        transition: .7s linear;
+}
+.download .show__phone{
+    transform: translateX(0%);
+    animation: bounce .7s linear .7s;
+}
+@keyframes bounce {
+    0%{
+        transform: translateX(0%);
+    }
+    20%{
+        transform: translateX(15px);
+    }
+    40%{
+        transform: translateX(0)
+    }
+    60%{
+        transform: translateX(-15px);
+    }
+    80%{
+        transform: translateX(15px);
+    }
+    100%{
+        transform: translateX(0%)
+    }
+
+}
+
 .download .img__col,.download .text__col{
     flex-basis: 50%;
     flex: 1;
@@ -311,6 +352,13 @@ button .text p{
     flex-direction: column;
     text-align: left;
     margin-left: 100px;
+    filter: opacity(0);
+    transition: 2s linear;
+    
+}
+.download .showtext{
+    filter: opacity(1);
+
 }
 .text__col h2{
     max-width: 344px;
@@ -506,9 +554,7 @@ form input[type=submit]{
     border-radius:15px ;
     /* white-space: nowrap; */
 }
-button img {
-    width: 45px;
-}
+
 button .text p {
     font-size: 1.05rem;
 }
