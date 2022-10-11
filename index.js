@@ -13,31 +13,31 @@ window.addEventListener('scroll', () => {
         main.classList.remove('light-box');
     }
   
-    const image = document.querySelectorAll('.img__col');
-    // console.log(image);
-    image.forEach((img)=>{
-        const imageHeight = img.getBoundingClientRect().top
-    if (pageYOffset > imageHeight  ){
-        img.classList.add('show__phone')
+    // const image = document.querySelectorAll('.img__col');
+    // // console.log(image);
+    // image.forEach((img)=>{
+    //     const imageHeight = img.getBoundingClientRect().top
+    // if (pageYOffset > imageHeight  ){
+    //     img.classList.add('show__phone')
         
-    }
-    else {
-        img.classList.remove('show__phone')
+    // }
+    // else {
+    //     img.classList.remove('show__phone')
         
-        };
-    })
-    const text = document.querySelectorAll('.text__col');
-     text.forEach((txt)=>{
-        const textHeight = txt.getBoundingClientRect().top
-    if (pageYOffset > textHeight ){
-        txt.classList.add('showtext')
+    //     };
+    // })
+    // const text = document.querySelectorAll('.text__col');
+    //  text.forEach((txt)=>{
+    //     const textHeight = txt.getBoundingClientRect().top
+    // if (pageYOffset > textHeight ){
+    //     txt.classList.add('showtext')
         
-    }
-    else {
-        txt.classList.remove('showtext')
+    // }
+    // else {
+    //     txt.classList.remove('showtext')
         
-        };
-    })
+    //     };
+    // })
    
     // console.log(pageYOffset);
 });

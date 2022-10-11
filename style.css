@@ -352,8 +352,8 @@ transition: 1s linear ;
     flex-direction: column;
     text-align: left;
     margin-left: 100px;
-    filter: opacity(0);
-    transition: 2s linear;
+    /* filter: opacity(0); */
+    /* transition: 2s linear; */
     
 }
 .download .showtext{
